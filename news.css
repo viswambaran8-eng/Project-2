@@ -12,17 +12,25 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-.menu_bar {
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: palevioletred;
     height: 10vh;
-    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header ul li {
+    list-style: none;
+}
+
+.menu_bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    inset: 0;
-    z-index: 1000;
 }
 
 .logo {
@@ -97,6 +105,10 @@ body {
 .dropdown_menu1 ul li {
     width: 120px;
     padding: 0;
+}
+
+.hamburger {
+    display: none;
 }
 
 /* ------------------------------*/

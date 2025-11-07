@@ -5,22 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorldView Magazine Dashboard</title>
-    <link rel="stylesheet" href="./the-dashboard1.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./the-dashboard1.css">
 </head>
 
 <body>
     <header>
+        <div>
+            <img class="logo" src="./Assets/logo.png" alt="">
+        </div>
         <nav class="menu_bar">
-            <div>
-                <img class="logo" src="./Assets/logo.png" alt="">
-            </div>
+
             <ul>
                 <li><a class="" href="./index.html">Home <i class="fa-solid fa-caret-down"></i></a>
                     <div class="dropdown_menu1">
                         <ul>
                             <li>
-                                <a href="">Home 2</a>
+                                <a href="./index2.html">Home 2</a>
                             </li>
                         </ul>
                     </div>
@@ -32,27 +43,23 @@
                         <ul>
                             <li><a href="./news.html">News</a></li>
                             <li><a href="./health.html">Health</a></li>
-                            <li><a href="./sport.html">Sports</a></li>
+                            <li><a href="sport.html">Sports</a></li>
                             <li><a href="./travel.html">Travel</a></li>
                         </ul>
                     </div>
                 </li>
                 <li><a class="" href="./contact.html">Contact Us</a></li>
-                <li><a class="" href="./dashboard1.html">Dashboard</a></li>
+                <li><a class="" href="./the-dashboard1.html">Dashboard</a></li>
             </ul>
-            <div>
-                <ul>
-                    <li><a class="" href="#"><i style="font-size: 30px;" class="fa-regular fa-circle-user"></i> </a>
-                    </li>
-                    <div class="hamburger">
-                        <div class="lines"></div>
-                        <div class="lines"></div>
-                        <div class="lines"></div>
-                    </div>
-                </ul>
-            </div>
         </nav>
-
+        <ul>
+            <li><a class="" href="./sign-in.html"><i style="font-size: 30px;color: white;" class="fa-regular fa-circle-user"></i> </a></li>
+            <div class="hamburger">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+        </ul>
     </header>
     <div class="header">
         <h1>🌍 Inspire360 Magazine</h1>
@@ -150,14 +157,6 @@
         <p>© 2025 Inspire360 | News • Travel • Sports • Health</p>
     </footer>
     <script>
-        // Smooth scroll
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
         // === Chart.js Data ===
 
         // NEWS CHART

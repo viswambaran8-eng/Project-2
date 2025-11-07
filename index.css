@@ -10,6 +10,7 @@
 body {
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
+    width: 100%;
 }
 
 header {
@@ -17,7 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: palevioletred;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 10vh;
     position: sticky;
     top: 0;
@@ -110,6 +111,14 @@ header ul li {
 
 .hamburger {
     display: none;
+    padding: 0px 10px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
 }
 
 /* ------------------------------------------------------------------- */

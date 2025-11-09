@@ -10,6 +10,7 @@
 body {
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
+    width: 100vw;
 }
 
 header {
@@ -17,11 +18,11 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: palevioletred;
-    /* overflow: hidden; */
     height: 10vh;
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 5px;
 }
 
 header ul li {
@@ -110,12 +111,21 @@ header ul li {
 
 .hamburger {
     display: none;
+    /* padding: 0px 10px; */
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 /* ------------------------------------------------------------------- */
 
 main {
     height: 100%;
+
 }
 
 main {
@@ -130,7 +140,7 @@ main {
     position: relative;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -145,17 +155,22 @@ main {
     justify-content: center;
     align-items: center;
     object-fit: contain;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .swiper-slide .home-img {
     display: block;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     object-fit: cover;
     filter: brightness(40%);
     opacity: 0.6;
     z-index: -1;
+    overflow: hidden;
+}
+
+.home-img {
+    overflow: hidden;
 }
 
 @media screen and (max-width:950px) {
@@ -210,6 +225,10 @@ main {
 
 @media screen and (max-width:1241px) {
     .menu_bar ul {
+        display: none;
+    }
+
+    header ul li {
         display: none;
     }
 
@@ -281,8 +300,9 @@ body {
 }
 
 .news-section {
-    padding: 40px 5%;
-    overflow-x: hidden;
+    width: 100vw;
+    padding: 20px;
+    overflow: hidden;
 }
 
 .news-section h2 {
@@ -336,7 +356,7 @@ body {
 
 .news-card {
     background: white;
-    flex: 350px;
+    flex: 300px;
     flex-wrap: wrap;
     border-radius: 16px;
     overflow-x: hidden;
@@ -383,7 +403,8 @@ body {
 /* news-section = 2 -----------------------------------------  */
 
 .news-section2 {
-    padding: 40px 5%;
+    width: 100vw;
+    padding: 10px;
     gap: 20px;
     overflow-x: hidden;
     display: flex;
@@ -392,7 +413,12 @@ body {
 @media screen and (max-width:1750px) {
     .container3 {
         display: none;
-        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .header a p {
+        font-size: large;
     }
 }
 
@@ -412,14 +438,18 @@ body {
     .container2,
     .container3 {
         margin-bottom: 10px;
-        overflow-x: hidden;
+    }
+
+    .header p {
+        gap: 30px;
+        font-size: larger;
     }
 }
 
 @media screen and (max-width:821px) {
     .container3 {
         display: block;
-    overflow-x: hidden;
+        overflow-x: hidden;
     }
 }
 
@@ -443,6 +473,8 @@ body {
     .news {
         flex-direction: column;
         padding: 0px;
+        justify-content: center;
+        align-items: center;
     }
 
     .header a {
@@ -452,13 +484,11 @@ body {
     .container2 {
         padding: 0px 0px;
     }
-
-
-
 }
 
 
 .image {
+    padding: 10px;
     position: relative;
 }
 
@@ -518,14 +548,14 @@ body {
 .header a {
     text-decoration: none;
     color: palevioletred;
-    font-size: x-large;
+    font-size: large;
     font-weight: 800;
 }
 
 .container1,
 .container2,
 .container3 {
-    flex: 350px;
+    flex: 300px;
     background-color: white;
     box-shadow: 0 18px 12px rgba(15, 10, 20, 0.15);
     transition: transform 0.3s ease;
@@ -534,21 +564,24 @@ body {
     overflow-x: hidden;
 }
 
+
 .Updates {
     display: flex;
     flex-direction: column;
     padding: 10px;
     gap: 25px;
+    overflow-x: hidden;
 }
 
 .news {
     width: 100%;
     display: flex;
-    overflow-x: hidden;
+    overflow: hidden;
+    padding: 20px;
 }
 
 .imgs {
-    width: 320px;
+    width: 280px;
     height: 150px;
 }
 
@@ -565,7 +598,7 @@ body {
 }
 
 .img-content {
-    padding: 25px;
+    padding: 20px;
 }
 
 .link-anchor {
@@ -587,18 +620,17 @@ body {
 
 .box {
     flex: 200px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     font-size: larger;
     border-radius: 12px;
-    margin: 8px;
 }
 
 .boxes2 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 10px;
     flex-direction: column;
     overflow-x: hidden;
 }
@@ -644,7 +676,7 @@ body {
 
 
 .news-section3 {
-    padding: 40px 5%;
+    padding: 10px;
     overflow-x: hidden;
 }
 
@@ -666,7 +698,7 @@ body {
     border-radius: 12px;
 }
 
-section {
+.the-section {
     overflow-x: hidden;
 }
 
@@ -682,6 +714,19 @@ section {
 .div {
     overflow-x: hidden;
 }
+
+.The-Parent {
+    overflow-x: hidden;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* .container-content {
+    overflow-x: hidden;
+} */
 
 @media screen and (max-width:620px) {
     .div1 {
@@ -727,7 +772,7 @@ section {
 /* -----------HAMBURGER MENU----------------- */
 
 .lines {
-    width: 35px;
+    width: 30px;
     height: 3px;
     background-color: white;
     margin-top: 8px;
@@ -906,6 +951,116 @@ footer {
 
 @media screen and (max-width:350px) {
     .set1 .logo {
-        width: 200px;
+        width: 250px;
     }
+}
+
+
+/* ------------------------------------------------------------------------------- */
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .lines {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: palevioletred;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    margin-top: 10vh;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 30px;
+    position: relative;
+}
+
+.sidebar ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar ul li .submenu {
+    list-style: none;
+    padding-left: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.sidebar ul li .submenu li {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.sidebar ul li.active .submenu {
+    max-height: 500px;
+}
+
+/* Close button */
+.sidebar .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Arrow rotation */
+.dropdown-arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul li.active>a .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width:1240px) {
+    .menu_bar ul {
+        display: none;
+    }
+
+    header ul li {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
 }

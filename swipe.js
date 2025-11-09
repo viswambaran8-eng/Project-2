@@ -18,7 +18,7 @@ var swiper = new Swiper(".mySwiper", {
 
     /* News  Box Section  */
     
-  const swiper1 = new Swiper1('.news-swiper-horizontal', {
+  const swiper1 = new Swiper ('.news-swiper-horizontal', {
     slidesPerView: 'auto',
     spaceBetween: 20,
     grabCursor: true,

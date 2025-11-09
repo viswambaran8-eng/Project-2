@@ -229,4 +229,119 @@ header ul li {
     .footer-header {
         font-size: larger;
     }
+    .logo {
+        width: 230px;
+    }
+    .set1 .logo {
+        width: 250px;
+    }
+}
+
+
+/* ------------------------------------------------------------------------------- */
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .lines {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: palevioletred;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    margin-top: 10vh;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 30px;
+    position: relative;
+}
+
+.sidebar ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar ul li .submenu {
+    list-style: none;
+    padding-left: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.sidebar ul li .submenu li {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.sidebar ul li.active .submenu {
+    max-height: 500px;
+}
+
+/* Close button */
+.sidebar .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Arrow rotation */
+.dropdown-arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul li.active > a .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width:1241px) {
+    .menu_bar ul {
+        display: none;
+    }
+    header ul li {
+        display:none ;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
 }

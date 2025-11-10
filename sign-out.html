@@ -21,12 +21,12 @@
 </head>
 
 <body>
+
     <header>
         <div>
-            <img class="logo" src="./images/logo_11zon_11zon.webp" alt="">
+            <img class="logo" src="./Assets/logo.png" alt="">
         </div>
         <nav class="menu_bar">
-
             <ul>
                 <li><a class="" href="./index.html">Home <i class="fa-solid fa-caret-down"></i></a>
                     <div class="dropdown_menu1">
@@ -44,7 +44,7 @@
                         <ul>
                             <li><a href="./news.html">News</a></li>
                             <li><a href="./health.html">Health</a></li>
-                            <li><a href="sport.html">Sports</a></li>
+                            <li><a href="./sport.html">Sports</a></li>
                             <li><a href="./travel.html">Travel</a></li>
                         </ul>
                     </div>
@@ -54,7 +54,7 @@
             </ul>
         </nav>
         <ul>
-            <li><a class="" href="./sign-in.html" style="color: white;"><i style="font-size: 30px;"
+            <li><a class="" href="./sign-in.html"><i style="font-size: 30px; color: white;"
                         class="fa-regular fa-circle-user"></i> </a></li>
             <div class="hamburger">
                 <div class="lines"></div>
@@ -64,32 +64,32 @@
         </ul>
     </header>
 
-  <!-- Sidebar -->
-  <div id="sidebar" class="sidebar">
-    <div class="close-btn">&times;</div>
-    <ul>
-      <li>
-        <a href="#">Home <span class="dropdown-arrow">&#9662;</span></a>
-        <ul class="submenu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="index2.html">Home 2</a></li>
+    <div id="sidebar" class="sidebar">
+        <div class="close-btn">&times;</div>
+        <ul>
+            <li>
+                <a href="#">Home <span class="dropdown-arrow">&#9662;</span></a>
+                <ul class="submenu">
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="index2.html">Home 2</a></li>
+                </ul>
+            </li>
+            <li><a href="./about.html">About Us</a></li>
+            <li>
+                <a href="#">Category <span class="dropdown-arrow">&#9662;</span></a>
+                <ul class="submenu">
+                    <li><a href="./news.html">News</a></li>
+                    <li><a href="./health.html">Health</a></li>
+                    <li><a href="./sport.html">Sports</a></li>
+                    <li><a href="./travel.html">Travel</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./the-dashboard1.html">Dashboard</a></li>
+            <li><a href="./sign-in.html">Sign In</a></li>
         </ul>
-      </li>
-      <li><a href="./about.html">About Us</a></li>
-      <li>
-        <a href="#">Category <span class="dropdown-arrow">&#9662;</span></a>
-        <ul class="submenu">
-          <li><a href="./culture.html">Culture</a></li>
-          <li><a href="./business.html">Business</a></li>
-          <li><a href="./entertainment.html">Entertainment</a></li>
-          <li><a href="./food.html">Food</a></li>
-        </ul>
-      </li>
-      <li><a href="./contact.html">Contact Us</a></li>
-      <li><a href="./the-dashboard2.html">Dashboard</a></li>
-      <li><a href="./sign-in.html">Sign In</a></li>
-    </ul>
-  </div>
+    </div>
+
 
     <div class="login-main">
         <form method="get" action="./error.html" class="login">
@@ -178,26 +178,26 @@
 
     // Open sidebar
     hamburger.addEventListener('click', () => {
-      sidebar.style.width = '100%';
+        sidebar.style.width = '100%';
     });
 
     // Close sidebar
     closeBtn.addEventListener('click', () => {
-      sidebar.style.width = '0';
+        sidebar.style.width = '0';
     });
 
     // Toggle submenus
     dropdowns.forEach(drop => {
-      drop.addEventListener('click', (e) => {
-        const parentLi = drop.parentElement;
-        const submenu = drop.nextElementSibling;
-        if (submenu && submenu.classList.contains('submenu')) {
-          e.preventDefault();
-          parentLi.classList.toggle('active');
-        }
-      });
+        drop.addEventListener('click', (e) => {
+            const parentLi = drop.parentElement;
+            const submenu = drop.nextElementSibling;
+            if (submenu && submenu.classList.contains('submenu')) {
+                e.preventDefault();
+                parentLi.classList.toggle('active');
+            }
+        });
     });
 
-  </script>
+</script>
 
 </html>

@@ -417,3 +417,7 @@ button a {
 header ul li a  {
     text-decoration: none;
 }
+
+button {
+    color: palevioletred;
+}

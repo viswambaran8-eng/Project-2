@@ -567,3 +567,8 @@ ul li a{
 header ul li a  {
     text-decoration: none;
 }
+
+div button a {
+    text-decoration: none;
+    color: palevioletred;
+}

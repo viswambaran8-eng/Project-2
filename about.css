@@ -21,6 +21,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 5px;
 }
 
 header ul li {
@@ -665,7 +666,7 @@ section h2 {
 }
 }
 
-
+/* ----------------------------------------------------------------------------------------- */
 /* Hamburger */
 .hamburger {
     display: none;
@@ -705,7 +706,7 @@ section h2 {
 }
 
 .sidebar ul li {
-    padding: 15px 30px;
+    padding: 15px 15px;
     position: relative;
 }
 
@@ -716,26 +717,35 @@ section h2 {
     color: white;
     text-decoration: none;
 }
+.sidebar ul li div span {
+    color: white;
+    text-decoration: none;
+}
+
+.flexdiv{
+display: flex;
+align-items: center;
+gap: 10px;
+}
 
 .sidebar ul li a:hover {
     color: #f1f1f1;
 }
 
-.sidebar ul li .submenu {
+.sidebar ul li .submenu  {
     list-style: none;
     padding-left: 15px;
-    max-height: 0;
+    /* max-height: 0; */
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    display: none;
 }
-
-.sidebar ul li .submenu li {
-    padding: 10px 0;
-    font-size: 14px;
+ .sidebar ul li .submenu2 {
+    padding-left: 15px;
+    display: none;
 }
-
-.sidebar ul li.active .submenu {
-    max-height: 500px;
+ .submenu1 {
+    padding-left: 15px;
+    display: block;
 }
 
 /* Close button */
@@ -749,13 +759,10 @@ section h2 {
 }
 
 /* Arrow rotation */
-.dropdown-arrow {
+.dropdownArrow {
     font-size: 12px;
     transition: transform 0.3s ease;
-}
-
-.sidebar ul li.active > a .dropdown-arrow {
-    transform: rotate(180deg);
+    cursor: pointer;
 }
 
 @media screen and (max-width:1200px) {
@@ -777,4 +784,8 @@ ul li a{
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+header ul li a  {
+    text-decoration: none;
 }

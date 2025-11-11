@@ -70,16 +70,18 @@
         <div class="close-btn">&times;</div>
         <ul>
             <li>
-                <a href="#">Home <span class="dropdown-arrow">&#9662;</span></a>
+                <div class="flexdiv">
+                    <a href="./index2.html">Home </a>
+                    <span class="dropdownArrow">&#9662;</span>
+                </div>
                 <ul class="submenu">
                     <li><a href="index.html">Home 1</a></li>
-                    <li><a href="index2.html">Home 2</a></li>
                 </ul>
             </li>
             <li><a href="./about2.html">About Us</a></li>
             <li>
-                <a href="#">Category <span class="dropdown-arrow">&#9662;</span></a>
-                <ul class="submenu">
+                <a href="#">Category <span class="dropdownArrow1">&#9662;</span></a>
+                <ul class="submenu2">
                     <li><a href="./culture.html">Culture</a></li>
                     <li><a href="./business.html">Business</a></li>
                     <li><a href="./entertainment.html">Entertainment</a></li>
@@ -93,33 +95,38 @@
     </div>
 
 
-<section class="Table">
-    <div class="login-main">
-        <form method="get" action="./error.html" class="login">
-            <div>
-                <h1>
-                    SIGN IN
-                </h1>
-                <h2>
-                    Sign in to manage your events
-                </h2>
-            </div>
-            <input type="email" placeholder="you@123example.com" required>
-            <input type="password" placeholder="Enter your Password" required>
-            <!-- <textarea rows="5" placeholder="Your Message"></textarea>   -->
-            <div class="flex1" style="display: inline-block; margin: 10px;">
-                <button class="cta-button" type="submit"><a href="./error.html">Login</a></button>
-                <button class="cta-button" type="reset"><a href="./error.html">Reset</a></button>
-
-                <div class="flex-content" style="display: flex; align-items: center; gap: 10px; margin: 10px;">
-                    <p>Don't have account? Create Now</p>
-                    <a style="color: palegreen; text-decoration: none;" href="./sign-out2.html">Create Account</a>
+    <section class="Table">
+        <div class="login-main">
+            <form method="get" action="./error.html" class="login">
+                <div>
+                    <h1>
+                        SIGN IN
+                    </h1>
+                    <h2>
+                        Sign in to manage your events
+                    </h2>
                 </div>
-            </div>
-            
-        </form>
-    </div>
-</section>
+                <input type="email" placeholder="you@123example.com" required>
+                <input type="password" placeholder="Enter your Password" required>
+                <!-- <textarea rows="5" placeholder="Your Message"></textarea>   -->
+                 <div>
+                    <a class="f-password" href="./forgetpassword2.html">Forget Password</a>
+                 </div>
+                <div class="flex1" style="display: inline-block; margin: 10px;">
+                    <button class="cta-button" type="submit"><a href="./error.html">Login</a></button>
+                    <button class="cta-button" type="reset"><a href="./error.html">Reset</a></button>
+
+                    <div class="flex-content" style="display: flex; align-items: center; gap: 10px; margin: 10px;">
+                        <p>Don't have account? Create Now</p>
+                        <a style="color: palegreen; text-decoration: none;" href="./sign-out2.html">Create Account</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    
+
     <footer>
         <div class="footer-parent">
             <div class="set1">
@@ -172,34 +179,37 @@
             </div>
         </div>
     </footer>
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const sidebar = document.getElementById('sidebar');
-    const closeBtn = document.querySelector('.close-btn');
-    const dropdowns = document.querySelectorAll('.sidebar ul li > a');
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.querySelector('.close-btn');
+        const dropdowns = document.querySelector('.dropdownArrow');
+        const dropdown1 = document.querySelector('.dropdownArrow1');
+        const subMenu = document.querySelector('.submenu');
+        const subMenu2 = document.querySelector('.submenu2');
 
-    // Open sidebar
-    hamburger.addEventListener('click', () => {
-      sidebar.style.width = '100%';
-    });
 
-    // Close sidebar
-    closeBtn.addEventListener('click', () => {
-      sidebar.style.width = '0';
-    });
+        // Open sidebar
+        hamburger.addEventListener('click', () => {
+            sidebar.style.width = '100%';
+        });
 
-    // Toggle submenus
-    dropdowns.forEach(drop => {
-      drop.addEventListener('click', (e) => {
-        const parentLi = drop.parentElement;
-        const submenu = drop.nextElementSibling;
-        if (submenu && submenu.classList.contains('submenu')) {
-          e.preventDefault();
-          parentLi.classList.toggle('active');
-        }
-      });
-    });
+        // Close sidebar
+        closeBtn.addEventListener('click', () => {
+            sidebar.style.width = '0';
+        });
 
-  </script>
+        // Toggle submenus
+
+        dropdowns.addEventListener('click', () => {
+            subMenu.classList.toggle('submenu')
+            subMenu.classList.toggle('submenu1')
+        })
+
+        dropdown1.addEventListener('click', () => {
+            subMenu2.classList.toggle('submenu2')
+            subMenu2.classList.toggle('submenu1')
+        })
+    </script>
 </body>
 </html>

@@ -175,6 +175,10 @@ main {
 }
 
 .swiper-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
 }
 
@@ -186,7 +190,8 @@ main {
 
 .swiper-content p {
     font-size: 30px;
-    padding: 10px;
+    padding: 10px 15px;
+    max-width: 80%;
     text-transform: capitalize;
     font-weight: 100;
 }

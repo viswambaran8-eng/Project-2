@@ -140,7 +140,6 @@ main {
   overflow: hidden;
 }
 
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -175,6 +174,10 @@ main {
 
 .swiper-content {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-content h2 {
@@ -185,7 +188,9 @@ main {
 
 .swiper-content p {
   font-size: 30px;
-  padding: 10px;
+  padding: 10px 15px;
+  max-width: 80%;
+  text-align: center;
   text-transform: capitalize;
   font-weight: 100;
 }
